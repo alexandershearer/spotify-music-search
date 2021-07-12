@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import Home from '../components/Home'
 import RedirectPage from '../components/RedirectPage'
 import Dashboard from '../components/Dashboard'
@@ -34,7 +34,7 @@ class AppRouter extends React.Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="main">
                     <Switch>
                         <Route
@@ -63,7 +63,7 @@ class AppRouter extends React.Component {
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 }
