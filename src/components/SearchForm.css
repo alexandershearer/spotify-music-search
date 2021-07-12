@@ -1,0 +1,19 @@
+.searchBar {
+    margin: 0 auto;
+    width: 40%;
+}
+
+.textInput {
+    text-align: center;
+}
+
+.searchButton {
+    background-color: #181818;
+    border: 1px solid #1ad760;
+    color: #1ad760;
+}
+
+.searchButton:hover {
+    background-color: #1ad760;
+    color: #181818;
+}

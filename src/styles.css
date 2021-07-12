@@ -8,12 +8,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f5f5f5;
+  background-image: rgb(0,0,0);
+  background: linear-gradient(210deg, rgba(0,0,0,1) 0%, rgba(35,60,44,1) 49%, rgba(26,215,96,1) 100%);
+  background-size: 400%;
   font-family: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
   letter-spacing: 1px;
-  color: #778298;
+  color: #a8a8a8;
+  text-align: center;
+
+  animation: bg-animation 10s infinite alternate;
 }
 
 .btn {
@@ -29,6 +34,14 @@ body {
 
 .login .btn {
   font-size: 1.2rem;
+  background-color: #181818;
+  border: 1px solid #1ad760;
+  color: #1ad760;
+}
+
+.login .btn :hover {
+  background-color: #1ad760;
+  color: #181818;
 }
 
 .main {
@@ -49,7 +62,7 @@ body {
 }
 
 .active {
-  border: 2px solid #566273;
+  border: 2px solid #1ad760;
 }
 
 .loading {
@@ -123,7 +136,7 @@ body {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #778298;
+  color: #5aca63;
 }
 
 .search-buttons .btn:focus {
@@ -141,6 +154,7 @@ body {
 .card {
   margin: 1rem;
   box-shadow: 0 2px 7px 3px #949ca5;
+  color: black;
 }
 
 .card .card-image-link {
@@ -165,5 +179,15 @@ body {
   }
   .main-heading {
     text-align: center;
+  }
+}
+
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
   }
 }
