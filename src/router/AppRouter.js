@@ -38,14 +38,14 @@ class AppRouter extends React.Component {
                 <div className="main">
                     <Switch>
                         <Route
-                            path="/"
+                            path="/spotify-music-search"
                             exact={true}
                             render={(props) => (
                                 <Home isValidSession={this.isValidSession} {...props} />
                             )}
                         />
                         <Route
-                            path="/redirect"
+                            path="/spotify-music-search/redirect"
                             render={(props) => (
                                 <RedirectPage
                                     isValidSession={this.isValidSession}
@@ -55,7 +55,7 @@ class AppRouter extends React.Component {
                             )}
                         />
                         <Route
-                            path="/dashboard"
+                            path="/spotify-music-search/dashboard"
                             render={(props) => (
                                 <Dashboard isValidSession={this.isValidSession} {...props} />
                             )}
