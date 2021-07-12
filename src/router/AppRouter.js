@@ -45,7 +45,7 @@ class AppRouter extends React.Component {
                             )}
                         />
                         <Route
-                            path="/spotify-music-search/redirect"
+                            path="/redirect"
                             render={(props) => (
                                 <RedirectPage
                                     isValidSession={this.isValidSession}
@@ -55,7 +55,7 @@ class AppRouter extends React.Component {
                             )}
                         />
                         <Route
-                            path="/spotify-music-search/dashboard"
+                            path="/dashboard"
                             render={(props) => (
                                 <Dashboard isValidSession={this.isValidSession} {...props} />
                             )}
