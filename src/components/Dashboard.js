@@ -27,7 +27,7 @@ const Dashboard = (props) => {
             });
         } else {
             history.push({
-                pathname: '/',
+                pathname: '/spotify-music-search',
                 state: {
                     session_expired: true
                 }

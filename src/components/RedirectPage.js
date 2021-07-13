@@ -6,15 +6,15 @@ export default class RedirectPage extends React.Component {
         const { history, location } = this.props;
         try {
             if (_.isEmpty(location.hash)) {
-                return history.push('/dashboard');
+                return history.push('/spotify-music-search/dashboard');
             }
             const access_token = getParamValues(location.hash);
             const expiryTime = new Date().getTime() + access_token.expires_in * 1000;
             localStorage.setItem('params', JSON.stringify(access_token));
             localStorage.setItem('expiry_time', expiryTime);
-            history.push('/dashboard');
+            history.push('/spotify-music-search/dashboard');
         } catch (error) {
-            history.push('/');
+            history.push('/spotify-music-search');
         }
     }
     render() {

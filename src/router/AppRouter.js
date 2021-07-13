@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from '../components/Home'
 import RedirectPage from '../components/RedirectPage'
 import Dashboard from '../components/Dashboard'
@@ -34,18 +34,18 @@ class AppRouter extends React.Component {
 
     render() {
         return (
-            <HashRouter>
+            <Router>
                 <div className="main">
                     <Switch>
                         <Route
-                            path="/"
+                            path="/spotify-music-search"
                             exact={true}
                             render={(props) => (
                                 <Home isValidSession={this.isValidSession} {...props} />
                             )}
                         />
                         <Route
-                            path="/redirect"
+                            path="/spotify-music-search/redirect"
                             render={(props) => (
                                 <RedirectPage
                                     isValidSession={this.isValidSession}
@@ -55,7 +55,7 @@ class AppRouter extends React.Component {
                             )}
                         />
                         <Route
-                            path="/dashboard"
+                            path="/spotify-music-search/dashboard"
                             render={(props) => (
                                 <Dashboard isValidSession={this.isValidSession} {...props} />
                             )}
@@ -63,7 +63,7 @@ class AppRouter extends React.Component {
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>
-            </HashRouter>
+            </Router>
         )
     }
 }

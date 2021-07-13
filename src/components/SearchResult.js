@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import AlbumsList from './AlbumsList';
 import ArtistsList from './ArtistsList';
-import PlayList from './PlayList';
+import Playlist from './Playlist';
 
 const SearchResult = (props) => {
     const {
@@ -20,7 +20,7 @@ const SearchResult = (props) => {
         return (
             <Redirect
                 to={{
-                    pathname: '/',
+                    pathname: '/spotify-music-search',
                     state: {
                         session_expired: true
                     }
@@ -67,14 +67,14 @@ const SearchResult = (props) => {
                 {artists && <ArtistsList artists={artists} />}
             </div>
             <div className={`${selectedCategory === 'playlist' ? '' : 'hide'}`}>
-                {playlist && <PlayList playlist={playlist} />}
+                {playlist && <Playlist playlist={playlist} />}
             </div>
             {!_.isEmpty(result[selectedCategory]) &&
                 !_.isEmpty(result[selectedCategory].next) && (
                     <div className="load-more" onClick={() => loadMore(selectedCategory)}>
                         <Button variant="info" type="button">
                             Load More
-            </Button>
+                        </Button>
                     </div>
                 )}
         </React.Fragment>
