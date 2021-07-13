@@ -34,7 +34,9 @@ class AppRouter extends React.Component {
 
     render() {
         return (
-            <Router>
+            <Router
+                basename="/spotify-music-search"
+            >
                 <div className="main">
                     <Switch>
                         <Route
